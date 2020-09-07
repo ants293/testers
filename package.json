@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cd server/ && npm install && node server",
+    "start": "node server",
     "build": "cd client/ && npm install && npm run build"
   },
   "repository": {
@@ -16,5 +16,8 @@
     "url": "https://github.com/ants293/lolo/issues"
   },
   "homepage": "https://github.com/ants293/lolo#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
