@@ -3,10 +3,12 @@ const express = require('express');
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+const buildPath = './client/build';
 
-// All remaining requests return the React app, so it can handle routing.
+app.use(express.static(buildPath));
+
 app.get('*', function(request, response) {
-    response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+    response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 });
 
 app.listen(PORT, () => {
